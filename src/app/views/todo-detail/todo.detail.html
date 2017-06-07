@@ -1,0 +1,12 @@
+<md-progress-spinner *ngIf="!ready"
+    class="loader"
+    strokeWidth="8"
+    color="#000000"
+    mode="indeterminate"
+></md-progress-spinner>
+
+<div *ngIf="ready">
+    <h2>{{selectedItem.name}}</h2>
+    <div><label>id: </label>{{selectedItem.id}}</div>
+    <div><label>name: </label>{{selectedItem.name}}</div>
+</div>
