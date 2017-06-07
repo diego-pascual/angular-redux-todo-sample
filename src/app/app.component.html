@@ -1,3 +1,26 @@
-<h1>
-  {{title}}
-</h1>
+<div>
+  <h1>{{title}}</h1>
+</div>
+<!-- FOR TEST -->
+<button (click)="loadData()">Cargar Items</button>
+
+<!-- TODO ADD ITEM -->
+<todo-add 
+  (onAddItem)="onAddItem($event)" 
+></todo-add>
+
+<!-- TODO LIST -->
+<md-progress-spinner *ngIf="!ready"
+    class="loader"
+    strokeWidth="8"
+    color="#000000"
+    mode="indeterminate"
+>
+</md-progress-spinner>
+<todo-list *ngIf="ready"
+    [items]="items" 
+    (onDeleteItem)="onDeleteItem($event)"  
+></todo-list>
+
+<!-- ROUTER RENDER -->
+<router-outlet></router-outlet>

@@ -1,4 +1,6 @@
-# MyApp
+# angular-redux-todo-sample
+
+If you want to learn Angular 4 + Redux, this is your example!!!
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.4.
 
